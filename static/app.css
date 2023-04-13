@@ -18,17 +18,178 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid;
-    height: 8vh;
+    height: 10vh;
     padding: 0vh 1vw;
+    box-shadow: 2px 5px 10px rgba(200,200,200,0.5);
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .navbar-body div:nth-child(2)>a {
     margin: 1vw;
 }
 
+.logo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.logo img{
+    /* height: 98%; */
+    margin-right: .5vh;
+}
+.logo h1{
+    font-size: 23px;
+}
+.scan{
+    display: flex;
+}
+
 .scan button {
     padding: .8vh 1vw;
     font-weight: 500;
     cursor: pointer;
+}
+.scan button:hover{
+    color: #00BCC2;
+}
+
+.scan button:nth-child(1){
+    margin-right: 1vw;
+}
+
+/* home code */
+.home-body{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3vh;
+
+}
+
+.info-container{
+    width: fit-content;
+    padding:7vh 5vw;
+    border-radius: 3px;
+    margin-top: 5vh;
+    box-shadow: 2px 5px 10px rgba(200,200,200,0.5),-2px -2px 10px rgba(200,200,200,0.5);
+}
+
+.info-container p{
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 3vh;
+    font-weight: 200;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.image-image{
+    height: 8vh;
+}
+
+.info-container button{
+    padding: .5vh 2vw;
+    height: 7vh;
+    cursor: pointer;
+    border:#00BCC2 1px solid;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: transparent;
+    width: 10vw;
+}
+.info-container button:hover{
+    color: white;
+    background-color: #00BCC2;
+    font-weight: 400;
+}
+.footer{
+    background-color: #00BCC2;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 6vh;
+    font-size: 13px;
+}
+
+.login-section{
+    width: fit-content;
+    padding:5vh 4vw;
+    border-radius: 3px;
+    box-shadow: 2px 5px 10px rgba(200,200,200,0.5),-2px -2px 10px rgba(200,200,200,0.5);
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+}
+.login-section form >div{
+    text-align: left;
+}
+.login-section label{
+    display: block;
+    margin-bottom: 1.5vh;
+    margin-top: 1vh;
+}
+
+.login-section input{
+    display: block;
+    width: 25vw;
+    border: none;
+    border-bottom: #00BCC2 1px solid;
+    outline: none;
+}
+.login-section input:hover{
+    border-bottom: #00BCC2 2px solid;
+}
+
+.login-section form >button{
+    margin-top: 4vh;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border: #00BCC2 1px solid;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.login-section form>button:hover{
+    color: white;
+    background-color: #00BCC2;
+    font-weight: 400;
+}
+
+
+/* display item styles */
+.items-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0vh 1.5vw;
+    margin-bottom: 7vh;
+}
+.items-container >div{
+    text-align: center;
+    width: 18vw;
+    margin-bottom: 3vh;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px rgba(200,200,200,0.5),-1px -1px 10px rgba(200,200,200,0.5);
+}
+.prod-title{
+    padding-left: 2vw;
+}
+.items-container >div h3{
+    height: 6vh;
+    font-size: 13px;
+}
+.items-container >div img{
+    height: 18vh;
+    max-width: 90%;
 }
