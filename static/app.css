@@ -1,10 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     font-family: inter;
-    font-weight: 400;
 }
+
+body {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
-/* nav bar styles */
+
+/* navbar styles */
+.navbar-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    height: 8vh;
+    padding: 0vh 1vw;
+}
+
+.navbar-body div:nth-child(2)>a {
+    margin: 1vw;
+}
+
+.scan button {
+    padding: .8vh 1vw;
+    font-weight: 500;
+    cursor: pointer;
+}
