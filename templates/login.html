@@ -1,4 +1,42 @@
-{% extends 'base.html' %}{{super()}}
-{% block content%}
-<h1>Login here</h1>
-{% endblock%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename ='fav.ico')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename ='app.css')}}">
+    <title>product scanner</title>
+</head>
+
+<body>
+    <div class="navbar-body">
+        <div class="logo">
+            <img src="{{url_for('static',filename ='fav.ico')}}" alt="logo">
+            <h1>
+                ProdScanner
+            </h1>
+        </div>
+        <div class="scan">
+            <form action="/open-camera" method="post">
+                <button type="submit">Scan Product</button>
+            </form>
+        </div>
+    </div>
+    <div class="login-section">
+        <img class="image-image" src="{{url_for('static',filename ='fav.ico')}}" at="logo">
+        <h3>Login</h3>
+        <form action="/login-now" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username">
+                <label for="password">Password:</label>
+                <input type="password" name="">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

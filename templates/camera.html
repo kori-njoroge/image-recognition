@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Camera Feed</title>
-</head>
-
+{% extends 'base.html' %}{{super()}}
+{% block content%}
 <body>
     <h1>Camera Feed</h1>
-    <img src="{{ url_for('video_feed') }}" width="640" height="480" />
+    <img src="{{ url_for('main.open_camera') }}" width="600" height="400" />
 </body>
-
-</html>
+{% endblock%}
