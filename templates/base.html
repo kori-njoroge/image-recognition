@@ -14,34 +14,29 @@
 
 <body>
     <div class="navbar-body">
-        <div>
+        <div class="logo">
+            <img src="{{url_for('static',filename ='fav.ico')}}" alt="logo">
             <h1>
                 ProdScanner
             </h1>
         </div>
-        <div class="links">
+        <!-- <div class="links">
             <a href="{{url_for('main.index')}}">Account</a>
-            <a href="{{url_for('main.profile')}}">Profile</a>
-            <a href="{{url_for('auth.signup')}}">Signup</a>
             <a href="{{url_for('auth.login')}}">Login</a>
-        </div>
+        </div> -->
         <div class="scan">
+            <form action="/login">
+                <button type="submit">Add Product</button>
+            </form>
             <form action="/open-camera" method="post">
                 <button type="submit">Scan Product</button>
             </form>
         </div>
     </div>
-    <!-- <script>
-        document.getElementById('scan-button').addEventListener('click', startCamera);
-
-        function startCamera() {
-            console.log('here we are')
-            fetch('/open_camera', {
-                method: 'POST'
-            });
-        }
-    </script> -->
     {% block content %} {% endblock%}
+    <div class="footer">
+        <p> &copy; 2022 Scanner|All Rights Reserved</p>
+    </div>
 </body>
 
 </html>
