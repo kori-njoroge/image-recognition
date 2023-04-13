@@ -1,16 +1,26 @@
 from flask import Blueprint, render_template, url_for
-import cv2
-import cv2
 from pyzbar.pyzbar import decode
+import requests
 import pytesseract
 import pyttsx3
+import cv2
 
 main = Blueprint('main', __name__)
+
+def get_products():
+    response = requests.get('https://fakestoreapi.com/products?limit=10')
+    return response.json()
+
 
 
 @main.route('/')
 def index():
     return render_template('index.html')
+
+@main.route('/home')
+def home():
+    products = get_products()
+    return render_template('home.html',products=products)
 
 
 @main.route('/open-camera', methods=['POST'])
@@ -91,8 +101,3 @@ def open_camera():
 
 if __name__ == '__main__':
     main.run(debug=True)
-
-
-@main.route('/profile')
-def profile():
-    return render_template('profile.html')
