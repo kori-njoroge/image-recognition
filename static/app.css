@@ -199,3 +199,19 @@ textarea{
     width: 100%;
     border-bottom: 1px solid #00BCC2;
 }
+.del-item{
+    margin-top: 4vh;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    border: #00BCC2 1px solid;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-bottom: 2vh;
+}
+
+
+.del-item:hover{
+    color: white;
+    background-color: #00BCC2;
+    font-weight: 400;
+}
