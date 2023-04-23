@@ -5,10 +5,14 @@
 <div class="items-container">
     {% for product in products %}
     <div>
-        <h3>{{product['title']}}</h3>
-        <img src={{product.image}} alt="product image">
+        <h3>{{product['name']}}</h3>
+        <img src={{product.image_url}} alt="product image">
         <p>{{ product['category'] }}</p>
         <p>${{ product['price'] }}</p>
+        <form action="/delete-me" method="post">
+            <input type="text" name="id" value="{{product['id']}}" style="visibility: hidden;">
+            <button class="del-item">Delete Item</button>
+        </form>
     </div>
     {% endfor %}
 </div>
